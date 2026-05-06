@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Emails</title>
+</head>
+<body>
+  <button onclick="loadEmails()">GET EMAILS</button>
+  <pre id="emailsOut"></pre>
+
+  <script>
+    async function loadEmails() {
+      const out = document.getElementById('emailsOut');
+      out.textContent = 'Загрузка...';
+
+      const res = await fetch('/emails');
+      const data = await res.json();
+      out.textContent = JSON.stringify(data, null, 2);
+      }
+  </script>
+
+  <button onclick="loadAttachments()">GET ATTACHMENTS</button>
+  <pre id="attachmentsOut"></pre>
+
+  <script>
+    async function loadAttachments() {
+      const out = document.getElementById('attachmentsOut');
+      out.textContent = 'Загрузка...';
+
+      const res = await fetch('/attachments');
+      const data = await res.json();
+      out.textContent = JSON.stringify(data, null, 2);
+      }
+  </script>
+</body>
+</html>

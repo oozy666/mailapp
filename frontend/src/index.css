@@ -1,0 +1,531 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #333333;
+  background-color: #f7f7f7;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.composeButton {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333333;
+}
+.composeButton:hover {
+  background-color: #f0f0f0;
+}
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #333333;
+}
+.navButton:hover {
+  background-color: #e8e8e8;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search {
+  padding: 10px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  outline: none;
+  color: #333333;
+}
+.search::placeholder {
+  color: #999999;
+}
+
+.emailList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailItem {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.emailItem:hover {
+  background-color: #fafafa;
+}
+
+.sender {
+  font-weight: 600;
+  color: #333333;
+}
+
+.subject {
+  color: #666666;
+  font-size: 0.9em;
+}
+
+/* Auth / Login Styles */
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.loginForm {
+  background-color: #ffffff;
+  padding: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.loginForm h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #333333;
+  text-align: center;
+}
+
+.loginInput {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1em;
+  outline: none;
+  color: #333333;
+}
+.loginInput:focus {
+  border-color: #999999;
+}
+
+.loginButton {
+  padding: 12px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 500;
+}
+.loginButton:hover {
+  background-color: #555555;
+}
+.loginButton:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+.authError {
+  background-color: #fff0f0;
+  border: 1px solid #ffcccc;
+  color: #cc0000;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.authToggle {
+  background: none;
+  border: none;
+  color: #666666;
+  cursor: pointer;
+  font-size: 0.85em;
+  text-decoration: underline;
+  padding: 0;
+}
+.authToggle:hover {
+  color: #333333;
+}
+
+/* User Info sidebar block */
+.userInfo {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9em;
+  color: #333333;
+  word-break: break-all;
+}
+
+.logoutButton {
+  margin-top: 15px;
+  padding: 6px 10px;
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  color: #666666;
+  width: 100%;
+}
+.logoutButton:hover {
+  background-color: #f0f0f0;
+}
+
+/* Compose Form Styles */
+.composeForm {
+  background-color: #ffffff;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.composeForm h2 {
+  margin: 0 0 10px 0;
+  color: #333333;
+}
+
+.composeInput, .composeTextarea {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+  resize: vertical;
+  color: #333333;
+  outline: none;
+}
+.composeInput:focus, .composeTextarea:focus {
+  border-color: #999999;
+}
+
+.composeSubmitButton {
+  padding: 12px 24px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+}
+.composeSubmitButton:hover {
+  background-color: #555555;
+}
+.composeSubmitButton:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+/* Email Detail View Styles */
+.emailDetail {
+  background-color: #ffffff;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.emailDetailHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.emailDetailHeader h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #222;
+}
+
+.backButton {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.backButton:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+  color: #333;
+}
+
+.emailMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.metaRow strong {
+  color: #333;
+  width: 60px;
+  display: inline-block;
+}
+
+.emailBody {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap; /* Важно для сохранения переносов строк */
+  padding: 10px 0;
+}
+
+.composeActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.unread-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+/* Drag & Drop Zone */
+.dropZone {
+  border: 2px dashed #cccccc;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropZone:hover {
+  border-color: #999;
+  background-color: #fafafa;
+}
+
+.dropZoneActive {
+  border-color: #007bff;
+  background-color: #f0f7ff;
+  color: #007bff;
+}
+
+.dropZoneIcon {
+  font-size: 1.5em;
+}
+
+/* Attachment List (compose) */
+.attachmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.attachmentItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.attachmentName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
+.attachmentSize {
+  color: #999;
+  font-size: 0.85em;
+  flex-shrink: 0;
+}
+
+.attachmentRemove {
+  background: none;
+  border: none;
+  color: #cc0000;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.attachmentRemove:hover {
+  background-color: #ffecec;
+}
+
+/* Attachment badge in email list */
+.attachmentBadge {
+  margin-left: 8px;
+  font-size: 0.85em;
+  color: #888;
+}
+
+/* Attachments section in email detail */
+.attachmentsSection {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.attachmentsSection h3 {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.attachmentDownloadList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.attachmentDownloadItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.attachmentDownloadItem:hover {
+  background-color: #eef4ff;
+  border-color: #b0c4de;
+}
+
+.attachmentDownloadIcon {
+  font-size: 1.1em;
+}
+
+/* Histogram styles */
+.histogram {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 45px;
+  margin-left: 15px;
+  padding: 6px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.histogram-bar {
+  width: 36px;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  transition: height 0.3s ease, background-color 0.2s;
+  cursor: help;
+}
+
+.histogram-bar[data-type="body"] { background-color: #50e3c2; }
+.histogram-bar[data-type="attach"] { background-color: #f5a623; }
+.histogram-bar[data-type="word"] { background-color: #4a90e2; }
+
+.histogram-bar:hover {
+  z-index: 20;
+  filter: brightness(0.9);
+}
+
+/* Tooltip on hover */
+.histogram-bar::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.histogram-bar:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}

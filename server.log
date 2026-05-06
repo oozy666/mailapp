@@ -1,0 +1,52 @@
+INFO:     Will watch for changes in these directories: ['/Users/oozy/Documents/stuuud/ИТР']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [26199] using WatchFiles
+INFO:     Started server process [26271]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:64737 - "POST /api/token HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64737 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64737 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64793 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64793 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64793 - "GET /assets/index-B3l5Lkjr.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64796 - "GET /assets/index-Dk4AfIpp.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64793 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51388 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51388 - "GET /assets/index-D1P17jGz.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51391 - "GET /assets/index-DFxdu5z_.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51388 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52571 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52571 - "GET /assets/index-BN90Gwl4.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52584 - "GET /assets/index-CgisQCok.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52571 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52721 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52727 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52727 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52742 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52742 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52742 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52742 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52876 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52890 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52994 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53035 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53059 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53086 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53125 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53215 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53311 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53348 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53528 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53757 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53938 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54156 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54354 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54474 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54693 - "GET /api/emails?folder=inbox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58194 - "GET /api/emails?folder=inbox HTTP/1.1" 401 Unauthorized
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26271]
+INFO:     Stopping reloader process [26199]
