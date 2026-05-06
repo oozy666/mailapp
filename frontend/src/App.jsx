@@ -16,22 +16,22 @@ function Histogram({ email }) {
 
   return (
     <div className="histogram">
-      <div 
-        className="histogram-bar" 
-        data-type="body" 
-        style={{ height: `${h1}px` }} 
+      <div
+        className="histogram-bar"
+        data-type="body"
+        style={{ height: `${h1}px` }}
         data-tooltip={`Символов: ${bodyLength}`}
       ></div>
-      <div 
-        className="histogram-bar" 
-        data-type="attach" 
-        style={{ height: `${h2}px` }} 
+      <div
+        className="histogram-bar"
+        data-type="attach"
+        style={{ height: `${h2}px` }}
         data-tooltip={`Вложения: ${(attachmentsSize / 1024).toFixed(1)} КБ`}
       ></div>
-      <div 
-        className="histogram-bar" 
-        data-type="word" 
-        style={{ height: `${h3}px` }} 
+      <div
+        className="histogram-bar"
+        data-type="word"
+        style={{ height: `${h3}px` }}
         data-tooltip={`Слов: ${wordCount}`}
       ></div>
     </div>
@@ -85,7 +85,7 @@ function App() {
 
     try {
       console.log("Starting auth process...", { authMode, authEmail });
-      
+
       if (authMode === "register") {
         const regRes = await fetch(`${API}/register`, {
           method: "POST",
@@ -93,7 +93,7 @@ function App() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: authEmail.trim(), password: authPassword }),
         });
-        
+
         if (!regRes.ok) {
           const regData = await regRes.json();
           throw new Error(regData.detail || "Registration failed");
@@ -120,7 +120,7 @@ function App() {
 
       const data = await logRes.json();
       console.log("Login successful, token received");
-      
+
       if (data.access_token) {
         localStorage.setItem("token", data.access_token);
         localStorage.setItem("userEmail", authEmail.trim());
@@ -313,7 +313,7 @@ function App() {
         <button className="composeButton" onClick={() => { setCurrentView("compose"); setAttachments([]); }}>Compose</button>
         <button className="navButton" onClick={() => setCurrentView("inbox")}>Inbox</button>
         <button className="navButton" onClick={() => setCurrentView("sent")}>Sent</button>
-        <button className="navButton">Trash</button>
+        {/* <button className="navButton">Trash</button> */}
       </aside>
 
       <main className="main">
@@ -331,29 +331,29 @@ function App() {
                 <p style={{ padding: '20px', color: '#666' }}>Список пуст</p>
               ) : (
                 emails.map((email) => (
-                    <div
-                      key={email.id}
-                      className="emailItem"
-                      onClick={() => {
-                        if (!email.is_read && currentView === "inbox") markAsRead(email.id);
-                        setSelectedEmail({ ...email, is_read: true });
-                        setCurrentView("view");
-                      }}
-                    >
-                      <div className="sender" style={{ display: 'flex', alignItems: 'center' }}>
-                        <span>{currentView === "inbox" ? `From: ${email.sender_email}` : `To: ${email.recipient_email}`}</span>
-                        {!email.is_read && currentView === "inbox" && <span className="unread-indicator"></span>}
-                      </div>
-                      <div className="subject">
-                        {email.subject || "(no subject)"}
-                        {email.attachments && email.attachments.length > 0 && (
-                          <span className="attachmentBadge">📎 {email.attachments.length}</span>
-                        )}
-                      </div>
-                      <div className="date" style={{ fontSize: '0.8em', color: '#888' }}>
-                        {new Date(email.sent_at).toLocaleString()}
-                      </div>
+                  <div
+                    key={email.id}
+                    className="emailItem"
+                    onClick={() => {
+                      if (!email.is_read && currentView === "inbox") markAsRead(email.id);
+                      setSelectedEmail({ ...email, is_read: true });
+                      setCurrentView("view");
+                    }}
+                  >
+                    <div className="sender" style={{ display: 'flex', alignItems: 'center' }}>
+                      <span>{currentView === "inbox" ? `From: ${email.sender_email}` : `To: ${email.recipient_email}`}</span>
+                      {!email.is_read && currentView === "inbox" && <span className="unread-indicator"></span>}
                     </div>
+                    <div className="subject">
+                      {email.subject || "(no subject)"}
+                      {email.attachments && email.attachments.length > 0 && (
+                        <span className="attachmentBadge">📎 {email.attachments.length}</span>
+                      )}
+                    </div>
+                    <div className="date" style={{ fontSize: '0.8em', color: '#888' }}>
+                      {new Date(email.sent_at).toLocaleString()}
+                    </div>
+                  </div>
                 ))
               )}
             </div>
